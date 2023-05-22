@@ -51,7 +51,7 @@ if __name__ == "__main__":
     for _ in range(100):
         # Get feedback value from sensor or system
         # In this example, generate random noise around the setpoint
-        feedback = pid.setpoint + random.uniform(-0.5, 0.5)
+        feedback = feedback + random.uniform(-0.5, 0.5)
 
         # Compute control output
         control_output = pid.update(feedback)
